@@ -6,6 +6,18 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 https://code.quarkus.io/?a=demo202210-techgym&e=resteasy-reactive&e=smallrye-openapi
 
+curl -s http://localhost:8080/bmi/63/1.67 | jq
+
+mvn clean package -Dquarkus.container-image.push=true
+
+results in https://quay.io/repository/mmortari/demo202210-techgym?tab=history
+
+https://developers.redhat.com/developer-sandbox
+
+kubectl apply -f target/kubernetes/kubernetes.yml
+
+http://my-route-mmortari-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/q/swagger-ui
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:

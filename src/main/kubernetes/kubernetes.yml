@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: my-route
+  namespace: mmortari-dev
+  labels:
+    app.kubernetes.io/name: demo202210-techgym
+    app.kubernetes.io/version: 1.0.0-SNAPSHOT
+spec:
+  to:
+    kind: Service
+    name: demo202210-techgym
+  tls: null
+  port:
+    targetPort: http
